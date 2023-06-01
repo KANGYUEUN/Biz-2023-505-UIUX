@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block and Inline Tag</title>
+    <style>
+      * {
+        /* 컴퓨터 코딩에서 (*)별표는 와일드카드 라고 하며 
+                모든것 이라는 의미로 표현
+            */
+
+        /* block tag 에 padding을 줄 경우
+        width 가 지정한 값으로 표현되지 않고
+        padding 만큼 변화되는 현상이 발생한다.
+
+        그러면 width 가 같더라도 padding 이 다르면 
+        block tag 의 box 모양이 흐트러지게 된다.
+        그러한 현상을 방지 하기 위하여
+        box-sizing: border-box 를 통해
+        속성을 전체(*)객체에 설정한다.
+        */
+
+        box-sizing: border-box;
+
+        /*
+            일부 tag 에는 기본값으로 padding 과 margin 이 설정 되어 있는 경우가 있다.
+            이때 style 에서 적용한 padding 이나 margin 이 원하는 값으로 지정 되지 않고,
+            layout 이 흐트러 지는 경우가 발생한다.
+
+            이 때문에 전체(*) 객체의 margin 과 padding을 0으로 
+            설정하는 초기화 코드를 사용하는것이 좋다.
+
+        */
+        margin: 0;
+        padding: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      p {
+        border: 1px solid blue;
+        padding: 5px;
+      }
+
+      div {
+        border: 1px solid red;
+        margin: 10px;
+      }
+
+      /* class 가 div3 인 div tag*/
+      div.div3 {
+        padding: 5px;
+        /* 박스(block tag)의 크기를 100px 만큼 보여라
+            실제로 박스의 크기가 줄어드는 것은 아님. 보여지는것만 지정해주는거임.
+            실제로는 tag 의 width 가 줄어든 것이 아니다.
+        */
+        width: 100px;
+      }
+
+      div.div4 {
+        width: 200px;
+      }
+
+      section {
+        text-align: center;
+      }
+
+      /* section box 내부의 div tag */
+      section > div {
+        border: 2px solid green;
+        width: 200px;
+      }
+
+      div.div5 {
+        padding: 20px;
+      }
+      div.div6 {
+        padding: 30px;
+      }
+      div.div7 {
+        padding: 10px;
+      }
+
+      article > div {
+        border: 2px solid blue;
+        /* block 성질의 tag를 inline 성질을 추가
+        inline 성질을 추가하면 
+        width를 설정 했을때 실제 box 의 whidth 가 변한다.
+        */
+        display: inline-block;
+        width: 200px;
+      }
+
+      article > div:nth-of-type(1) {
+        padding: 20px;
+      }
+      article > div:nth-of-type(2) {
+        background-color: yellowgreen;
+        /* top과 bottom : 20px
+            left, right : 10px
+            */
+
+        padding: 20px 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      article > div:nth-of-type(3) {
+        /* Top, Right, Bottom, Left */
+        /* top 에서 시작하여 시계방향으로 적용하기 */
+        padding: 20px 30px 40px 50px;
+
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-left: 50px;
+        padding-right: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Block Tag</h1>
+    <p>
+      Block Tag 는 Content 가 없어도 width 는 full set 이다. 좌우 화면에 가득
+      찬다는 말.
+    </p>
+    <p>
+      Block Tag 의 Content가 없으면 height 는 없다. 그래서 Block tag 에 border
+      를 설정하면 한 라인으로 보인다.
+    </p>
+    <div>div tag 의 magin 기본값이 0 이다.</div>
+    <div>div</div>
+    <div class="div3">div</div>
+    <div class="div4">div</div>
+    <section>
+      <div class="div5">div1</div>
+      <div class="div6">div2</div>
+      <div class="div7">div3</div>
+    </section>
+    <article>
+      <div>div</div>
+      <div>div</div>
+      <div>div</div>
+    </article>
+  </body>
+</html>

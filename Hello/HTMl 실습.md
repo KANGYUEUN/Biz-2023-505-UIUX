@@ -115,3 +115,31 @@
   border: 1px solid wheat;
 - a tag 는 크기 조정을 display 속성을 통해 해야함.
 - 속성이 원해 inline 인데 속성을 inline-block로 바꾼것임.
+
+- 박스간 좌우 정렬 : `*`
+-   * {
+        /* 컴퓨터 코딩에서 (*)별표는 와일드카드 라고 하며 
+                모든것 이라는 의미로 표현
+            */
+        box-sizing: border-box;
+      }
+- 한라인에 박스 정렬하기
+- display: inline-block;
+
+- `padding `:  top 기준 시계방향으로 
+- article > div:nth-of-type(3) {
+        /* Top, Right, Bottom, Left */
+        padding: 20px 30px 40px 50px;
+        위의 방법과 하단의 방법 모두 사용가능하다.
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-left: 50px;
+        padding-right: 30px;
+      }
+- article > div:nth-of-type(2) {
+        background-color: yellowgreen;
+        /* top과 bottom : 20px
+            left, right : 10px
+            */
+        padding: 20px 10px;
+      }
