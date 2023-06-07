@@ -1,0 +1,83 @@
+/* CSS 초기화 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: rgb(52, 152, 219);
+  color: aliceblue;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  padding: 1rem;
+}
+
+nav {
+  background-color: rgb(94, 94, 94);
+  color: white;
+  display: flex;
+}
+
+nav a {
+  padding: 12px 16px 8px 16px;
+  margin: 7px 7px 5px 7px;
+  border-bottom: 2px solid transparent;
+  transition: 0.7s;
+}
+
+nav a:first-of-type {
+  margin-left: 10px;
+}
+
+nav a:last-of-type {
+  margin-right: 10px;
+}
+
+nav a:nth-of-type(4) {
+  margin-left: auto;
+}
+
+nav a:nth-of-type(6) {
+  margin-left: auto;
+}
+
+nav a:hover {
+  border-bottom: 2px solid black;
+}
+
+section {
+  display: flex;
+}
+
+article {
+  flex: 1;
+  margin: 5px;
+  border: 1px solid green;
+  height: 500px; /*크기조절*/
+}
+
+p.dash-title {
+  color: blue;
+  font-weight: bold;
+  transform: 0.7s;
+  padding: 5px;
+}
+
+p.dash-title:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+footer {
+  background-color: rgb(224, 224, 224);
+  color: black;
+  text-align: center;
+  padding: 0.7rem;
+}
