@@ -60,7 +60,6 @@ article {
   flex: 1;
   margin: 5px;
   border: 1px solid green;
-  height: 500px; /*크기조절*/
 }
 
 p.dash-title {
