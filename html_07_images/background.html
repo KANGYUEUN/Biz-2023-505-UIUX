@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>background</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        width: 100vw;
+        height: 100vh;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      div {
+        height: 100%;
+        width: 100%;
+        border: 1px solid red;
+      }
+      div:nth-of-type(1) {
+        background-image: url("./images/image5.jpg");
+        /* 배경이미지를 box 의 height, width 의 100% 로 채우기 */
+        background-size: 100% 100%;
+        /* CSS2에서 CSS3로 진행하면서 강화된 기능 */
+        background-attachment: fixed;
+      }
+      div:nth-of-type(2) {
+        background-image: url("./images/image4.jpg");
+        /* 배경이미지를 box에 가득 채우기 */
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      div:nth-of-type(3) {
+        background-image: url("./images/image3.jpg");
+        /* 이미지가 박스보다 작을때 cover 로 하고
+        repeat 를 no- repeat 로 해주면 box 크기 만큼 늘려 가득 채우기 */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+      }
+      div:nth-of-type(4) {
+        background-image: url("./images/image2.jpg");
+        background-size: 100% 200%;
+      }
+      div:nth-of-type(5) {
+        background-image: url("./images/image1.jpg");
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </body>
+</html>
