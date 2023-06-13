@@ -45,6 +45,7 @@ const nation = () => {
 console.log(nation1 + nation2);
 nation();
 console.log(nation1 + nation2);
+
 /*
 외부에서 nation 변수값을 매개변수로 전달받고,
 함수 내부에서 사용하기(변경, 읽기)
